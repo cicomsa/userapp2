@@ -1,0 +1,71 @@
+[
+  {
+    "path": "/page-a",
+    "linkTitle": "Page A",
+    "pageTitle": "Page A",
+    "pageDescription": "Description page A",
+    "table": {
+      "apiEndpoint": "/page-a-data.json",
+      "columns": [
+        {
+          "title": "Name"
+        },
+        {
+          "title": "Email"
+        },
+        {
+          "title": "Location"
+        },
+        {
+          "title": "Online"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/page-b",
+    "linkTitle": "Page B",
+    "pageTitle": "Page B",
+    "pageDescription": "Description page B",
+    "table": {
+      "apiEndpoint": "/page-b-data.json",
+      "columns": [
+        {
+          "title": "Name"
+        },
+        {
+          "title": "Email"
+        },
+        {
+          "title": "Location"
+        },
+        {
+          "title": "Online"
+        }
+      ]
+    }
+  },
+  {
+    "path": "/page-c",
+    "linkTitle": "Page C",
+    "pageTitle": "Page C",
+    "pageDescription": "Description page C",
+    "table": {
+      "apiEndpoint": "/page-c-data.json",
+      "columns": [
+        {
+          "title": "Name"
+        },
+        {
+          "title": "Email"
+        },
+        {
+          "title": "Location"
+        },
+        {
+          "title": "Online"
+        }
+      ]
+    }
+  }
+]

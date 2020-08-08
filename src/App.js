@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import data from './data/pages.json'
+import PageLink from './components/PageLink'
+import Title from './components/Title'
+import Description from './components/Description'
+import Table from './components/Table'
 
-function App() {
+const components = {
+  linkTitle: PageLink,
+  pageTitle: Title,
+  pageDescription: Description,
+  table: Table
+}
+
+const App = () => {
+  const Section = components[data.type]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Section />
     </div>
   );
 }

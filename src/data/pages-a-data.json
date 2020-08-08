@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "John Moe",
+    "email": "john_moe@email.com",
+    "location": "London",
+    "online": false,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "email": "jane_doe@email.com",
+    "location": "London",
+    "online": false,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  },
+  {
+    "id": 3,
+    "name": "Mike Smith",
+    "email": "mike_smith@email.com",
+    "location": "Brighton",
+    "online": true,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Catherine Johnson",
+    "email": "catherine_johnson@email.com",
+    "location": "Toronto",
+    "online": false,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  },
+  {
+    "id": 2,
+    "name": "Samuel Bry",
+    "email": "samuel_bry@email.com",
+    "location": "Vancouver",
+    "online": true,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Simpson",
+    "email": "daniel_simposon@email.com",
+    "location": "Toronto",
+    "online": true,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  }
+]

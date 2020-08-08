@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Mike Johnson",
+    "email": "mike_johnson@email.com",
+    "location": "New York",
+    "online": false,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  },
+  {
+    "id": 2,
+    "name": "Jane Sorrow",
+    "email": "jane_sorrow@email.com",
+    "location": "Boston",
+    "online": true,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Johnson",
+    "email": "daniel_johnson@email.com",
+    "location": "Florida",
+    "online": true,
+    "avatar": "https://source.unsplash.com/random/10x10"
+  }
+]
