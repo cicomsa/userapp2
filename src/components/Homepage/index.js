@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <Link to='/page-a'>Page A}</Link>
+    <Link to='/page-a'>Page A</Link>
   )
 }
 
