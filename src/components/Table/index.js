@@ -16,7 +16,6 @@ const Table = ({ table }) => {
   const [contentData, setContentData] = useState([])
   const { apiEndpoint, columns } = table
 
-
   useEffect(() => {
     // api call replacement - fake
     const data = getData[apiEndpoint]
