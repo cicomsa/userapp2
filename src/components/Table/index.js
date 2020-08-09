@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import CheckSVG from '../CheckSVG'
 import pageAData from '../../data/page-a-data.json'
 import pageBData from '../../data/page-b-data.json'
 import pageCData from '../../data/page-c-data.json'
+import './index.css'
 
+// only for mock data usage case
 const getData = {
   '/page-a-data.json': pageAData,
   '/page-b-data.json': pageBData,
@@ -10,26 +13,43 @@ const getData = {
 }
 
 const Table = ({ table }) => {
+  const [contentData, setContentData] = useState([])
   const { apiEndpoint, columns } = table
-  const contentData = getData[apiEndpoint]
+
+
+  useEffect(() => {
+    // api call replacement - fake
+    const data = getData[apiEndpoint]
+
+    setContentData(data)
+  },[apiEndpoint, contentData])
 
   return (
-    columns.map(column => {
-      return (
-        <div key={column.title}>
-          <p>{column.title}</p>
-          {
-            contentData.map(c => {
-              const keyName = column.title.toLowerCase()
+    <div className="wrapper">
+      {
+        columns.map(column => {
+          return (
+            <div key={column.title} className="content">
+              <p>{column.title}</p>
+              {
+                contentData.map(c => {
+                  const keyName = column.title.toLowerCase()
 
-              return (
-                <p key={c[keyName]}>{c[keyName]}</p>
-              )
-            })
-          }
-        </div>
-      )
-    })
+                  return (
+                    <p
+                      className={c[keyName] === true ? 'online' : ''}
+                      key={c[keyName]}
+                    >
+                      {c[keyName] === true ? <CheckSVG /> : c[keyName]}
+                    </p>
+                  )
+                })
+              }
+            </div>
+          )
+        })
+    }
+    </div>
   )
 }
 
