@@ -6,10 +6,9 @@ import Content from './components/Content'
 const App = () => {
   return (
     <Router>
-      <Route path="/pages-a" component={Content} />
-      <Route path="/pages-b" component={Content} />
-      <Route path="/pages-c" component={Content} />
-      <Route path="/" component={<Link to='/page-a'>Page A</Link>} />
+      <Route path="/page-a" component={Content} />
+      <Route path="/page-b" component={Content} />
+      <Route path="/page-c" component={Content} />
     </Router>
   )
 }
