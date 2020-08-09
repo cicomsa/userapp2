@@ -17,7 +17,7 @@ const Table = ({ table }) => {
   const { apiEndpoint, columns } = table
 
   useEffect(() => {
-    // api call replacement - fake
+    // API call/GraphQL query replacement - fake
     const data = getData[apiEndpoint]
 
     setContentData(data)
@@ -35,6 +35,7 @@ const Table = ({ table }) => {
                   const keyName = column.title.toLowerCase()
 
                   return (
+                    // unique key errors to be fixed
                     <p
                       className={c[keyName] === true ? 'online' : ''}
                       key={c[keyName]}
@@ -47,7 +48,7 @@ const Table = ({ table }) => {
             </div>
           )
         })
-    }
+      }
     </div>
   )
 }

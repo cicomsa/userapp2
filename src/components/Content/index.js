@@ -7,6 +7,7 @@ import Table from '../Table'
 import data from '../../data/pages.json'
 import './index.css'
 
+// components to be rewritten as one component
 const components = {
   pageTitle: Title,
   pageDescription: Description,
@@ -35,7 +36,7 @@ const Content = () => {
           .filter(key => key !== 'path' && key !== 'linkTitle')
           .map(key => {
           const Section = components[key]
-
+          // less props to be passed to Section, as not all the Section components need all the props
           return <Section key={key} {...content}/>
         })
       }
