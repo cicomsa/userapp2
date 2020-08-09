@@ -4,6 +4,7 @@ import Title from '../Title'
 import PageLink from '../PageLink'
 import Description from '../Description'
 import Table from '../Table'
+import Homepage from '../Homepage'
 import data from '../../data/pages.json'
 import './index.css'
 
@@ -18,6 +19,7 @@ const Content = () => {
   const location = useLocation()
   const pathName = location.pathname
 
+  if (pathName === '/') return <Homepage />
   // data should come from an API call/GraphQL query - mock functionality not implemented
   const content = data.find(content => content.path === pathName)
   const contentKeys = Object.keys(content)
