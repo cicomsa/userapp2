@@ -15,7 +15,7 @@ const Content = () => {
   const location = useLocation()
   const pathName = location.pathname
 
-  // data should come from an API - mock functionality not implemented
+  // data should come from an API call/GraphQL query - mock functionality not implemented
   const content = data.find(content => content.path === pathName)
   const contentKeys = Object.keys(content)
 
