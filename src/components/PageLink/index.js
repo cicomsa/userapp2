@@ -1,8 +1,8 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom"
 
 const PageLink = ({ linkTitle, path }) =>  {
-  const history = useHistory();
+  const history = useHistory()
 
   const handleClick = () => {
     history.push(path);
@@ -12,7 +12,7 @@ const PageLink = ({ linkTitle, path }) =>  {
     <button type="button" onClick={handleClick}>
       {linkTitle}
     </button>
-  );
+  )
 }
 
 export default PageLink
