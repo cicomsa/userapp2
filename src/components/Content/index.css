@@ -1,0 +1,7 @@
+.links-wrapper {
+  display: flex;
+}
+
+.link {
+  margin-right: 20px;
+}

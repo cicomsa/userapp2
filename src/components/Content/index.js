@@ -1,9 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Title from '../Title'
+import PageLink from '../PageLink'
 import Description from '../Description'
 import Table from '../Table'
 import data from '../../data/pages.json'
+import './index.css'
 
 const components = {
   pageTitle: Title,
@@ -20,13 +22,24 @@ const Content = () => {
   const contentKeys = Object.keys(content)
 
   return (
-    contentKeys
-      .filter(key => key !== 'path' && key !== 'linkTitle')
-      .map(key => {
-      const Section = components[key]
+    <>
+      <div className="links-wrapper">
+        {
+          data
+            .filter(content => content.path !== pathName)
+            .map(content => <PageLink path={content.path} linkTitle={content.linkTitle}/>)
+        }
+      </div>
+      {
+        contentKeys
+          .filter(key => key !== 'path' && key !== 'linkTitle')
+          .map(key => {
+          const Section = components[key]
 
-      return <Section key={key} {...content}/>
-    })
+          return <Section key={key} {...content}/>
+        })
+      }
+    </>
   )
 }
 
