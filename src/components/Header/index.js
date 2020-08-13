@@ -1,7 +1,7 @@
 import React from 'react'
 import PageLink from '../PageLink'
 
-const Header = ({data, pathName}) => {
+const Header = ({ data, pathName }) => {
   return (
     <div>
       {

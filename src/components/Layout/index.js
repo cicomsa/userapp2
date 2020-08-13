@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Header from '../Header'
 import data from '../../data/pages.json'
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   const location = useLocation()
   const pathName = location.pathname
 
