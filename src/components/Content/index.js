@@ -2,7 +2,6 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Table from '../Table'
 import data from '../../data/pages.json'
-import './index.css'
 
 const Content = () => {
   const location = useLocation()
