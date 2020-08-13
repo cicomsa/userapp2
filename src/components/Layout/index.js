@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import PageLink from '../PageLink'
+import Header from '../Header'
 import data from '../../data/pages.json'
 
 const Layout = ({children}) => {
@@ -9,13 +9,7 @@ const Layout = ({children}) => {
 
   return (
     <>
-      <div className="links-wrapper">
-        {
-          data
-            .filter(content => content.path !== pathName)
-            .map(content => <PageLink path={content.path} linkTitle={content.linkTitle}/>)
-        }
-      </div>
+      <Header data={data} pathName={pathName} />
       {children}
     </>
   )
