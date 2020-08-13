@@ -38,7 +38,7 @@ const Table = ({ table }) => {
                     // unique key errors to be fixed
                     <p
                       className={c[keyName] === true ? 'online' : ''}
-                      key={c[keyName]}
+                      key={c.id}
                     >
                       {c[keyName] === true ? <CheckSVG /> : c[keyName]}
                     </p>
