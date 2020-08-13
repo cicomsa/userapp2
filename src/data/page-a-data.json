@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Jane Doe",
     "email": "jane_doe@email.com",
-    "location": "London",
+    "location": "Manchester",
     "online": false,
     "avatar": "https://source.unsplash.com/random/10x10"
   },

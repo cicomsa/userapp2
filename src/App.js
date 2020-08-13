@@ -8,9 +8,14 @@ const App = () => {
   return (
     <Router>
       <Layout>
-        <Route path="/page-a" component={Content} />
-        <Route path="/page-b" component={Content} />
-        <Route path="/page-c" component={Content} />
+        {(pathName, content) => (
+          <Route
+            path={pathName}
+            render={() => (
+              <Content content={content} />
+            )}
+          />
+        )}
       </Layout>
     </Router>
   )
