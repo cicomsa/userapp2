@@ -12,6 +12,13 @@ const getData = {
   '/page-c-data.json': pageCData
 }
 
+const components = {
+  name: ({ name, avatar }) => <p>{name}</p>,
+  email: ({ email }) => <p><a href="" email={email}>{email}</a></p>,
+  location: ({ location }) => <p>{location}</p>,
+  online: ({ online }) =>  online && <p className="online"><CheckSVG /></p>
+}
+
 const Table = ({ table }) => {
   const [contentData, setContentData] = useState([])
   const { apiEndpoint, columns } = table
@@ -27,21 +34,16 @@ const Table = ({ table }) => {
     <div className="wrapper">
       {
         columns.map(column => {
+          const keyName = column.title.toLowerCase()
+          const Component = components[keyName]
+
           return (
             <div key={column.title} className="content">
               <p>{column.title}</p>
               {
                 contentData.map(c => {
-                  const keyName = column.title.toLowerCase()
-
                   return (
-                    // unique key errors to be fixed
-                    <p
-                      className={c[keyName] === true ? 'online' : ''}
-                      key={c.id}
-                    >
-                      {c[keyName] === true ? <CheckSVG /> : c[keyName]}
-                    </p>
+                    <Component {...c} key={c.id} />
                   )
                 })
               }

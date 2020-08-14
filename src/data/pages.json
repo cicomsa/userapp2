@@ -8,16 +8,20 @@
       "apiEndpoint": "/page-a-data.json",
       "columns": [
         {
-          "title": "Name"
+          "title": "Name",
+          "keys": ["name", "avatar"]
         },
         {
-          "title": "Email"
+          "title": "Email",
+          "keys": ["email"]
         },
         {
-          "title": "Location"
+          "title": "Location",
+          "keys": ["location"]
         },
         {
-          "title": "Online"
+          "title": "Online",
+          "keys": ["online"]
         }
       ]
     }
@@ -31,16 +35,20 @@
       "apiEndpoint": "/page-b-data.json",
       "columns": [
         {
-          "title": "Name"
+          "title": "Name",
+          "keys": ["name", "avatar"]
         },
         {
-          "title": "Email"
+          "title": "Email",
+          "keys": ["email"]
         },
         {
-          "title": "Location"
+          "title": "Location",
+          "keys": ["location"]
         },
         {
-          "title": "Online"
+          "title": "Online",
+          "keys": ["online"]
         }
       ]
     }
@@ -54,16 +62,20 @@
       "apiEndpoint": "/page-c-data.json",
       "columns": [
         {
-          "title": "Name"
+          "title": "Name",
+          "keys": ["name", "avatar"]
         },
         {
-          "title": "Email"
+          "title": "Email",
+          "keys": ["email"]
         },
         {
-          "title": "Location"
+          "title": "Location",
+          "keys": ["location"]
         },
         {
-          "title": "Online"
+          "title": "Online",
+          "keys": ["online"]
         }
       ]
     }
