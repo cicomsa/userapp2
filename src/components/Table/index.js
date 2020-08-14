@@ -12,7 +12,7 @@ const getData = {
   '/page-c-data.json': pageCData
 }
 
-const components = {
+const cells = {
   name: ({ name, avatar }) => <p>{name}</p>,
   email: ({ email }) => <p><a href={`mailto:${email}`}>{email}</a></p>,
   location: ({ location }) => <p>{location}</p>,
@@ -35,7 +35,7 @@ const Table = ({ table }) => {
       {
         columns.map(column => {
           const keyName = column.title.toLowerCase()
-          const Component = components[keyName]
+          const Cell = cells[keyName]
 
           return (
             <div key={column.title} className="content">
@@ -46,7 +46,7 @@ const Table = ({ table }) => {
                   column.keys.map(key => (props[key] = c[key]))
 
                   return (
-                    <Component {...props} key={c.id} />
+                    <Cell {...props} key={c.id} />
                   )
                 })
               }
