@@ -42,8 +42,11 @@ const Table = ({ table }) => {
               <p>{column.title}</p>
               {
                 contentData.map(c => {
+                  const props = {}
+                  column.keys.map(key => (props[key] = c[key]))
+
                   return (
-                    <Component {...c} key={c.id} />
+                    <Component {...props} key={c.id} />
                   )
                 })
               }
