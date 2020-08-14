@@ -14,7 +14,7 @@ const getData = {
 
 const components = {
   name: ({ name, avatar }) => <p>{name}</p>,
-  email: ({ email }) => <p><a href="" email={email}>{email}</a></p>,
+  email: ({ email }) => <p><a href={`mailto:${email}`}>{email}</a></p>,
   location: ({ location }) => <p>{location}</p>,
   online: ({ online }) =>  online && <p className="online"><CheckSVG /></p>
 }
