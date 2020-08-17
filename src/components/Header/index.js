@@ -2,7 +2,6 @@ import React from 'react'
 import PageLink from '../PageLink'
 
 const Header = ({ links, pathName }) => {
-
   return (
     <div>
       {
